@@ -25,7 +25,7 @@ namespace cache_timer {
         }
     }
 
-    long long measure(const int H, const int S) {
+    __attribute__ ((optimize(0))) long long measure(const int H, const int S) {
         char **x;
         for (int i = (S - 1) * H; i >= 0; i -= H) {
             x = (char **) &data[i];
